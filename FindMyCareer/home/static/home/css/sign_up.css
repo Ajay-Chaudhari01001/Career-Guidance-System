@@ -1,19 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@100;200;300;400&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.container {
+    top: 60px;
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: auto;
+    padding: 25px 30px;
+    background: #fff;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+.container h1 {
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 26px;
+    background: linear-gradient(130deg, #342d30, #814096);
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #9b599b;
+}
+
+/* body {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     padding-left: 10px;
-    /* background: linear-gradient(130deg, #eca3c5, #814096); */
+    background: linear-gradient(130deg, #eca3c5, #814096);
 }
 
 .container {
@@ -25,21 +54,9 @@ body {
     border-radius: 5px;
 }
 
-.container .title {
-    font-size: 20px;
-    font-weight: 500;
-    position: relative;
-}
 
-.container .title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 26px;
-    background: linear-gradient(130deg, #342d30, #814096);
-}
+
+
 
 .container form .user-details {
     display: flex;
@@ -65,10 +82,7 @@ form .user-details .input-box {
     border: 1px solid #ccc;
 }
 
-.user-details .input-box input:focus,
-.user-details .input-box input:valid {
-    border-color: #9b599b;
-}
+
 
 form .gender-details .gender-title{
     font-size: 20px;
@@ -132,7 +146,7 @@ form .btn input:hover{
 }
 
 /* media queries for form */
-@media (max-width: 584px) {
+/* @media (max-width: 584px) {
     .container{
         max-width: 100%;
     }
@@ -147,4 +161,4 @@ form .btn input:hover{
         max-width: 400px;
         overflow: scroll;
     }
-}
+}  */

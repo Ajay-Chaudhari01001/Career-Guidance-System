@@ -18,26 +18,7 @@
 </head>
 <body>
     
-    <!-- starting header section -->
-
-        <header>
-            <a href="#" class="logo"><span>FindMy</span>Career</a>
-
-            <input type="checkbox" id="menu-bar">
-            <label for="menu-bar" class="fas fa-bars"></label>
-
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#fetures" >Fetures</a>
-                <a href="#contact">Contact us</a>
-                <a href="#about">About us</a>
-                <a href="login/">Login</a>
-                <a href="signup/">Sign Up</a>
-            </nav>
-            <a href="#username" class="username">GUEST</a>
-        </header>
-    <!-- end of header section -->
+   {% include 'home/header.html' %}
 
     {% block content %}
 
