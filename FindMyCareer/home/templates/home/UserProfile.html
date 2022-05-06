@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> User Profile </title>
-</head>
-<body>
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title%} Sign Up Page {% endblock title %}
+
+{% block css %}
+      <link rel="stylesheet" href="{% static 'home/css/UserProfile.css' %}">  
+{% endblock css %}
+
+{% block content %}
+
+{% include 'home/header.html' %}
+<div class="center">
     <h1> Hello {{user}} </h1>
     {% if messages %}
         {% for message in messages %}
@@ -14,5 +19,5 @@
         {% endfor %}
     {% endif %}
     <a href="{% url 'user_logout' %}">Logout</a>
-</body>
-</html>
+</div>
+    {% endblock content %}

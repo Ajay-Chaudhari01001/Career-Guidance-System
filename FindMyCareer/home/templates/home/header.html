@@ -19,7 +19,6 @@
 
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar" class="fas fa-bars"></label>
-
         <nav class="navbar">
             <a href="{% url 'home_page' %} %">Home</a>
             <a href="#services">Services</a>
@@ -29,7 +28,7 @@
             <a href="{% url 'login' %}">Login</a>
             <a href="{% url 'signup' %}">Sign Up</a>
         </nav>
-       <a href="#username" class="username">Welcome {{user}}</a> 
+       <a href="{% url 'profile' %}" class="username">Welcome {{user}}</a> 
     </header>
 <!-- end of header section -->
 </body>

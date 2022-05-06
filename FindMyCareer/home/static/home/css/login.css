@@ -15,11 +15,11 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    height: 300px;
+    height: 360px;
     background: #fff;
     border-radius: 10px;
-    border: .1rem solid rgba(0, 0, 0, .2);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: 0.1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
 }
 
 .center h1{
@@ -85,6 +85,8 @@ body{
     margin: -5px 0 20px 5px;
     color: #a6a6a6;
     cursor: pointer;
+    font-size: 14px;
+    
 }
 
 .pass a:hover{
