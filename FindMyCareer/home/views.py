@@ -1,8 +1,9 @@
+from ast import Pass
 from django.shortcuts import redirect, render, HttpResponseRedirect
 from .forms import SignUpForm
 from django.contrib import messages
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 
 # Create your views here , for homepage.
 def home(request):
@@ -56,3 +57,19 @@ def profile(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/login/')
+
+# change password using old password , view function
+def user_change_pass(request):
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            fm = PasswordChangeForm(user=request.user, data=request.POST)
+            if fm.is_valid():
+                fm.save()
+                update_session_auth_hash(request, fm.user)
+                messages.success(request, "Password Changed Successfully !!")
+                return HttpResponseRedirect('/profile/')
+        else:
+            fm = PasswordChangeForm(user=request.user)
+        return render(request, 'home/changepass.html', {'form':fm})
+    else:
+        return HttpResponseRedirect('/login/')

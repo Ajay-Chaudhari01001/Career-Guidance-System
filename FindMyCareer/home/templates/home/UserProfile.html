@@ -2,7 +2,7 @@
 {% extends "home/base.html" %}
 {% load static %}
 
-{% block title%} Sign Up Page {% endblock title %}
+{% block title %} Sign Up Page {% endblock title %}
 
 {% block css %}
       <link rel="stylesheet" href="{% static 'home/css/UserProfile.css' %}">  
@@ -19,5 +19,6 @@
         {% endfor %}
     {% endif %}
     <a href="{% url 'user_logout' %}">Logout</a>
+    <a href="{% url 'changepass' %}">Change Password</a>
 </div>
     {% endblock content %}
