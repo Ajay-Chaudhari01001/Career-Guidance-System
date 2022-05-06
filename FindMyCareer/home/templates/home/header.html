@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <link rel="stylesheet" href="{% static 'home/css/header.css' %}">
 </head>
-<body>
-     <!-- starting header section -->
 
-     <header>
+<body>
+    <!-- starting header section -->
+
+    <header>
         <a href="#" class="logo"><span>FindMy</span>Career</a>
 
         <input type="checkbox" id="menu-bar">
@@ -22,14 +24,15 @@
         <nav class="navbar">
             <a href="{% url 'home_page' %} %">Home</a>
             <a href="#services">Services</a>
-            <a href="#fetures" >Fetures</a>
+            <a href="#fetures">Fetures</a>
             <a href="#contact">Contact us</a>
             <a href="#about">About us</a>
             <a href="{% url 'login' %}">Login</a>
             <a href="{% url 'signup' %}">Sign Up</a>
         </nav>
-       <a href="{% url 'profile' %}" class="username">Welcome {{user}}</a> 
+        <a href="{% url 'profile' %}" class="username">Welcome {{user}}</a>
     </header>
-<!-- end of header section -->
+    <!-- end of header section -->
 </body>
+
 </html>

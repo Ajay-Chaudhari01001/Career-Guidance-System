@@ -5,7 +5,7 @@
 {% block title %} Sign Up Page {% endblock title %}
 
 {% block css %}
-      <link rel="stylesheet" href="{% static 'home/css/UserProfile.css' %}">  
+<link rel="stylesheet" href="{% static 'home/css/UserProfile.css' %}">
 {% endblock css %}
 
 {% block content %}
@@ -21,4 +21,4 @@
     <a href="{% url 'user_logout' %}">Logout</a>
     <a href="{% url 'changepass' %}">Change Password</a>
 </div>
-    {% endblock content %}
+{% endblock content %}

@@ -5,7 +5,7 @@
 {% block title%} Sign Up Page {% endblock title %}
 
 {% block css %}
-      <link rel="stylesheet" href="{% static 'home/css/sign_up.css' %}">  
+<link rel="stylesheet" href="{% static 'home/css/sign_up.css' %}">
 {% endblock css %}
 
 {% block content %}
@@ -13,21 +13,20 @@
 {% include 'home/header.html' %}
 <br><br><br><br><br><br><br>
 <div class="container">
-<form action="" method="POST" novalidate>
-    <h1>Registration</h1>
-    {% csrf_token %}
-    {% for fm in form %}
-      {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
-    {% endfor %}
-    <input type="submit" value="Submit">
-</form>
+    <form action="" method="POST" novalidate>
+        <h1>Registration</h1>
+        {% csrf_token %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
 </div>
 {% if messages %}
-  {% for message in messages %}
-   <small {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</small>
-  {% endfor %}
+    {% for message in messages %}
+        <small {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</small>
+    {% endfor %}
 {% endif %}
-
 
 {% endblock content %}
 

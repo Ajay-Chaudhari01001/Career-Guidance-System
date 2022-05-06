@@ -7,70 +7,73 @@
 {% block css %}
     {{ block.super }}
 {% endblock css %}
-    <!-- starting header section -->
+<!-- starting header section -->
 
 {% block content %}
 
-    <!-- starting home section  -->
+<!-- starting home section  -->
 
-    <section class="home" id="home">
+<section class="home" id="home">
 
-        <div class="content">
-            <h3>Discover Yourself And <span>Start your free career test</span></h3>
-            <p> Take the test and find the perfect role for your after 12th .</p>
-              <a href="#" class="btn">Give The Test</a>   
+    <div class="content">
+        <h3>Discover Yourself And <span>Start your free career test</span></h3>
+        <p> Take the test and find the perfect role for your after 12th .</p>
+        <a href="#" class="btn">Give The Test</a>
+    </div>
+
+    <div class="image">
+        <img src="{% static 'home/images/think2.png' %}">
+    </div>
+
+    <div class="card">
+
+    </div>
+
+</section>
+<!-- end of home section  -->
+
+
+<!-- 10th 12th graduation section cards -->
+<section class="educations" id="educations">
+
+    <!-- After 10th -->
+    <h1 class="heading"> What to do Now </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="{% static 'home/images/f-icon1.png' %}" alt="">
+            <h3>After 10th </h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
+                rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error
+                cupiditate possimus dolores?</p>
+            <a href="#" class="btn">Read More</a>
         </div>
+    </div>
 
-        <div class="image">
-            <img src="{% static 'home/images/think2.png' %}" >
+    <!-- After 12th -->
+    <div class="box-container">
+        <div class="box">
+            <img src="{% static 'home/images/f-icon2.png' %}" alt="">
+            <h3>After 12th ? </h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
+                rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error
+                cupiditate possimus dolores?</p>
+            <a href="#" class="btn">Read More</a>
         </div>
+    </div>
 
-        <div class="card">
-
+    <!-- After graduation -->
+    <div class="box-container">
+        <div class="box">
+            <img src="{% static 'home/images/f-icon3.png' %}" alt="">
+            <h3>After Graduation ? </h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
+                rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error
+                cupiditate possimus dolores?</p>
+            <a href="#" class="btn">Read More</a>
         </div>
+    </div>
 
-    </section>
-    <!-- end of home section  -->
-
-
-    <!-- 10th 12th graduation section cards -->
-    <section class="educations" id="educations">
-
-        <!-- After 10th -->
-        <h1 class="heading"> What to do Now </h1>
-
-        <div class="box-container">
-            <div class="box">
-                <img src="{% static 'home/images/f-icon1.png' %}" alt="">
-                <h3>After 10th </h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
-                 rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error cupiditate possimus dolores?</p>
-                 <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <!-- After 12th -->
-        <div class="box-container">
-            <div class="box">
-                <img src="{% static 'home/images/f-icon2.png' %}" alt="">
-                <h3>After 12th ? </h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
-                 rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error cupiditate possimus dolores?</p>
-                 <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <!-- After graduation -->
-        <div class="box-container">
-            <div class="box">
-                <img src="{% static 'home/images/f-icon3.png' %}" alt="">
-                <h3>After Graduation ? </h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
-                 rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error cupiditate possimus dolores?</p>
-                 <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-
-    </section>
-    <!-- end educations cards section -->
+</section>
+<!-- end educations cards section -->
 {% endblock content %}

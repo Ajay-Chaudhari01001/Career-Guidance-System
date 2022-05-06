@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,23 @@
     <title>{% block title %} {% endblock title %}</title>
 
     <!-- awesome font link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <!-- css file links -->
     {% block css %}
     <link rel="stylesheet" href="{% static 'home/css/homepage.css' %}">
     {% endblock css %}
-    
+
 </head>
+
 <body>
-    
-   {% include 'home/header.html' %}
+
+    {% include 'home/header.html' %}
 
     {% block content %}
 
     {% endblock content %}
 
 </body>
+
 </html>

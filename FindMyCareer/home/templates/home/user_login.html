@@ -5,7 +5,7 @@
 {% block title%} Login Page {% endblock title %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'home/css/login.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/login.css' %}">
 {% endblock css %}
 
 
@@ -24,8 +24,8 @@
 
         {% for fm in form %}
         <div class="text_field">
-            {{fm.label_tag}} 
-             <span></span>
+            {{fm.label_tag}}
+                <span></span>
             {{fm}} {{fm.errors|striptags}}
         </div>
         {% endfor %}
