@@ -15,10 +15,18 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 350px;
     height: 360px;
     background: #fff;
     border-radius: 10px;
     border: 0.1rem solid rgba(0, 0, 0, .2);
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
 }
+
+.center form{
+    padding: 12px;
+}
+.center a{
+    font-size: large;
+}
+

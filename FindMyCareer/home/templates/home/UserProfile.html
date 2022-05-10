@@ -11,7 +11,7 @@
 {% block content %}
 <br><br><br><br><br>
 <div class="center">
-    <h1> Welcome {{user}} Sir</h1>
+    <h1> {{user.first_name}} {{user.last_name}}</h1>
     {% if messages %}
         {% for message in messages %}
             <small {% if message.tags %} class="{{message.tags}}" {% endif %}> {{message}} </small>
