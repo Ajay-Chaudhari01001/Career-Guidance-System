@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+
+    <!-- awesome font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  >
+
+    <!-- css file links -->
+   {% block css %}
+    <link rel="stylesheet" href="{% static 'home/css/aboutUs.css' %}">
+    {% endblock css %}
+   
+    
+</head>
+<body>
+    
+    <!-- starting header section -->
+
+        <header>
+            <a href="index" class="logo"><span>FindMy</span>Career</a>
+
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar" class="fas fa-bars"></label>
+
+            <nav class="navbar">
+                <a href="index">Home</a>
+                <a href="services">Courses</a>
+                <a href="features" >Fetures</a>
+                <a href="contactUs">Contact us</a>
+                <a href="aboutUs">About us</a>
+                <a href="login">Login</a>
+                <a href="signup">Sign Up</a>
+            </nav>
+            <a href="#username" class="username">GUEST</a>
+        </header>
+    <!-- end of header section -->
+
+    {% block content %}
+
+    {% endblock content %}
+
+</body>
+</html>

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@100;200;300;400&display=swap');
 
 
+body {
+    background: url("../images/about-bg.png");
+}
 .container {
     top: 60px;
     max-width: 500px;

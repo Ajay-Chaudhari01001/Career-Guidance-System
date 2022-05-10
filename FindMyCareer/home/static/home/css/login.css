@@ -1,125 +1,117 @@
  @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@100;200;300;400&display=swap');
 
-body{
+*{
     margin:0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    overflow: hidden;
-}
-
-
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 360px;
-    background: #fff;
-    border-radius: 10px;
-    border: 0.1rem solid rgba(0, 0, 0, .2);
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
-}
-
-.center h1{
-    text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
-    font-size: medium;
-}
-
-.center form{
-    padding: 0 40px;
     box-sizing: border-box;
 }
 
- form .text_field{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 18px 0px;
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    /* background: #f2f2f2; */
 }
-.text_field input{
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 14px;
-    border: none;
-    background: none;
-    outline: none;
+.wrapper{
+    width: 350px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
 
-.text_field label{
-    position: absolute;
-    top: 36%;
-    left: 1px;
-    color: #adadad;
-    transform: translateY(-50%);
-    font-size: 13px;
-    pointer-events: none;
-}
-
-.text_field span::before{
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background:#814096;
-    transition: .5s;
-}
-
-.text_field input:focus ~ label, 
-.text_field input:valid ~ label{
-    top: -5px;
-    color: #814096;
-}
-
-.text_field input:focus ~ span::before, 
-.text_field input:valid ~ span::before{
-    width:100%;
-}
-
-.pass a{
-    margin: -5px 0 20px 5px;
-    color: #a6a6a6;
-    cursor: pointer;
-    font-size: 14px;
-    
-}
-
-.pass a:hover{
-    text-decoration: underline;
-}
-
-input[type="submit"]{
-    width: 80%;
-    height: 50px;
-    border: 1x solid ;
-    background: #814096;
-    border-radius: 25px;
-    font-size: 18px;
-    color: #e9f4fb;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-}
-
-input[type="submit"]:hover{
-    border-color: #814096;
-    transition: .5s;
-}
-
-.signup_link{
-    margin: 11px 0;
+.wrapper .title{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
     text-align: center;
+    line-height: 75px;
+    border-radius: 15px 15px 0px 0px;
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+.wrapper form {
+    padding: 14px 30px 50px 30px;
+}
+
+.wrapper form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 22px;
+}
+
+.wrapper form .field input{
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid lightgrey;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus,
+.wrapper form .field input:valid{
+    border-color: #814096;
+}
+.wrapper form .field label{
+    position: absolute;
+    top: 31%;
+    left: 20%;
+    font-size: 13px;
+    transform: translate(-30%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus ~ label,
+.wrapper form .field input:valid ~ label{
+    top: 0%;
+    color: #814096;
+    /* background: #fff; */
+    transform: translate(-50%);
+}
+
+.wrapper form .pass-link{
+    color:#814096;
+    margin-top: 16px;
+    margin-bottom: 4px;
     font-size: 14px;
-    color: #666666;
+    text-decoration: none;
+}
+
+.wrapper form .field input[type="submit"]{
+    color: #fff;
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input[type="submit"]:active{
+    transform: scale(0.95);
+}
+
+.wrapper .signup_link{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: -17px;
+    text-align: center;
 }
 
 
-.signup_link a:hover{
-     color: #814096;
-     text-decoration: underline;
-}  
+
+.wrapper p {
+    color: red;
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* .wrapper form #btn:hover{
+    color: #265df2;
+} */

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+{% extends "home/base.html" %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Password</title>
-</head>
+{% block title %} Reset Password  {% endblock title %}
 
-<body>
-    <html>password change
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/changepass.css' %}">
+{% endblock css %}
 
-    </html>
+{% block content %}
+<br><br><br><br><br>
     <form action="" method="POST" novalidate>
         {% csrf_token %}
         {% if form.non_field_errors %}
             {% for error in form.non_field_errors %}
                 <p>{{error}}</p>
-            {% endfor %}
+            {% endfor %} 
         {% endif %}
 
         {% for fm in form %}
@@ -25,6 +23,4 @@
         {% endfor %}
         <input type="submit" value="Save">
     </form>
-</body>
-
-</html>
+    {% endblock content %}

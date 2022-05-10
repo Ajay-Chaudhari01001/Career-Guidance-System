@@ -5,7 +5,7 @@
 {% block title %} Home Page {% endblock title %}
 
 {% block css %}
-    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'home/css/homepage.css' %}">
 {% endblock css %}
 <!-- starting header section -->
 
@@ -18,11 +18,11 @@
     <div class="content">
         <h3>Discover Yourself And <span>Start your free career test</span></h3>
         <p> Take the test and find the perfect role for your after 12th .</p>
-        <a href="#" class="btn">Give The Test</a>
+        <a href="{% url 'givetestinfo' %}" class="btn">Give The Test</a>
     </div>
 
     <div class="image">
-        <img src="{% static 'home/images/think2.png' %}">
+        <img src="{% static 'home/images/HeadPhoto.png' %}">
     </div>
 
     <div class="card">
@@ -41,39 +41,37 @@
 
     <div class="box-container">
         <div class="box">
-            <img src="{% static 'home/images/f-icon1.png' %}" alt="">
+            <img src="{% static 'home/images2/after10th.png ' %}" alt="">
             <h3>After 10th </h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
-                rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error
-                cupiditate possimus dolores?</p>
-            <a href="#" class="btn">Read More</a>
+            <p>Are you stuck with the questions like What after 10th? What to do
+                 after the 10th and which streams to choose?</p>
+            <a href="{% url 'after10th' %}" class="btn">Read More</a>
         </div>
     </div>
 
     <!-- After 12th -->
     <div class="box-container">
         <div class="box">
-            <img src="{% static 'home/images/f-icon2.png' %}" alt="">
+            <img src="{% static 'home/images2/after12th.png' %}" alt="">
             <h3>After 12th ? </h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
-                rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error
-                cupiditate possimus dolores?</p>
-            <a href="#" class="btn">Read More</a>
+            <p>Class 12th is a life-changing step of our lives as we move a step closer to making
+                 wonderful careers. But, how to choose a career after class 12th?</p>
+            <a href="{% url 'after12th' %}" class="btn">Read More</a>
         </div>
     </div>
 
     <!-- After graduation -->
     <div class="box-container">
         <div class="box">
-            <img src="{% static 'home/images/f-icon3.png' %}" alt="">
+            <img src="{% static 'home/images2/graduation6.png' %}" alt="">
             <h3>After Graduation ? </h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sed quos,
-                rerum nisi autem fugit eaque ipsam amet nulla iusto corrupti impedit iure voluptates animi ea error
-                cupiditate possimus dolores?</p>
-            <a href="#" class="btn">Read More</a>
+            <p>To make your choice easier, here’s just small selection of the graduate careers 
+                available to you no matter what degree subject you study.</p>
+            <a href="{% url 'aftergraduation' %}" class="btn">Read More</a>
         </div>
     </div>
 
 </section>
 <!-- end educations cards section -->
+ {% include 'home/footer.html' %}
 {% endblock content %}

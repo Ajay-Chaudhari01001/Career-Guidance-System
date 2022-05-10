@@ -9,15 +9,27 @@
 {% endblock css %}
 
 {% block content %}
-
-{% include 'home/header.html' %}
+<br><br><br><br><br>
 <div class="center">
-    <h1> Hello {{user}} </h1>
+    <h1> Welcome {{user}} Sir</h1>
     {% if messages %}
         {% for message in messages %}
             <small {% if message.tags %} class="{{message.tags}}" {% endif %}> {{message}} </small>
         {% endfor %}
     {% endif %}
+
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p>{{error}}</p>
+            {% endfor %}
+        {% endif %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+        {% endfor %}
+        <input type="submit" value="Save Changes">
+    </form>
     <a href="{% url 'user_logout' %}">Logout</a>
     <a href="{% url 'changepass' %}">Change Password</a>
 </div>

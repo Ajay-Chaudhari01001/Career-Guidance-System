@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@100;200;300;400&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    padding: 4rem;
+    margin-top: 8rem;
+    margin-left: 46rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    height: 70vh;
+    width: 313px;
+    background: #fff;
+    border-radius: 10px;
+    border: 0.1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+}
+ 
+
+
+.tag{
+    position: absolute;
+    top: 36%;
+    left: 1px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 13px;
+    pointer-events: none;
+}
+
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+
+
+input[type="submit"]{
+    width: 60%;
+    height: 40px;
+    border: 1x solid ;
+    background: #814096;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    border-color: #814096;
+    transition: .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 360px;
+    background: #fff;
+    border-radius: 10px;
+    border: 0.1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+}
+
+
+.container form{
+    padding: 0 40px;
+    box-sizing: border-box;
+} */

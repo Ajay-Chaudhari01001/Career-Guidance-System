@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@100;200;300;400&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+body h4{
+    font-size: 22px;
+    padding: 23px;
+    text-transform: capitalize;
+    text-align: center;
+    background: url('/static/home/images/eduHead.png');
+    color: white;
+    word-spacing: 1px;
+}

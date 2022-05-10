@@ -10,10 +10,9 @@
 
 
 {% block content %}
-
-<!-- {% include 'home/header.html' %} -->
-<div class="center">
-    <h1>Login</h1>
+<br><br>
+<div class="wrapper">
+    <div class="title">Login Form</div>
     <form action="" method="POST" novalidate>
         {% csrf_token %}
         {% if form.non_field_errors %}
@@ -23,14 +22,16 @@
         {% endif %}
 
         {% for fm in form %}
-        <div class="text_field">
+        <div class="field">
+            {{fm.errors|striptags}}
+            {{fm}} 
             {{fm.label_tag}}
-                <span></span>
-            {{fm}} {{fm.errors|striptags}}
         </div>
         {% endfor %}
-        <div class="pass"><a href="#">Forgot Password</a></div>
+        <div class="pass-link"><a href="#">Forgot Password</a></div>
+        <div class="field" id="btn">
         <input type="submit" name="" value="Login">
+        </div>
         <div class="signup_link">
             Not a member? <a href="{% url 'signup' %}"> Signup</a>
         </div>

@@ -117,7 +117,7 @@ header label{
 }
 
  
-
+/* 
 /* media queries */
 
 @media (max-width:1200px){
@@ -186,4 +186,4 @@ header label{
     html {
         font-size: 50%;
     }
-}
+} 

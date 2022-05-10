@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title%} Contact Us {% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/contact_us.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+<br><br><br><br><b><br>
+<h1> Contact our team </h1>
+ 
+ <div class="container">
+    <!-- <div class="image">
+        <img src="{% static 'home/images/contact-img.png' %}">
+    </div>  -->
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-control">
+            <div class="tag">Full Name</div>
+            <input type="text" name="full-name">
+        </div><br>
+        <div class="form-control">
+            <div class="tag">Email</div>
+            <input type="email" name="email">
+        </div><br>
+        <div class="form-control">
+            <div class="tag">Subject</div>
+            <input type="text" name="subject">
+        </div><br>
+        <div class="form-control">
+            <div class="tag">Message</div>
+            <textarea name="message" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-control">
+            <input type="submit" class="btn submit-btn" value="Send Message">
+        </div>
+    </form> 
+    {% if messages %}
+    {% for message in messages %}
+        <small {% if message.tags %} class="{{message.tags}}" {% endif %}> {{message}} </small>
+    {% endfor %}
+{% endif %}
+</div>
+{% endblock content %}
