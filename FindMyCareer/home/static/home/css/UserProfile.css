@@ -24,7 +24,7 @@ body{
 }
 
 .center form{
-    padding: 12px;
+    text-align: center;
 }
 .center a{
     font-size: large;

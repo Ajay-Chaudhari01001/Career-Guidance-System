@@ -18,5 +18,5 @@ urlpatterns = [
     path('aftergraduation/', views.aftergraduation, name="aftergraduation"),
     path('givetestinfo/', views.givetestinfo, name="givetestinfo"),
     # path('sendemail/', views.send_email, name="sendemail"),
-     path('footer', views.footer, name="givetestinfo"),
+    #  path('footer/', views.footer, name="givetestinfo"),
 ]

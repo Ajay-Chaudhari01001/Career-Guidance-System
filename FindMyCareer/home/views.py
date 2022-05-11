@@ -18,7 +18,7 @@ def sign_up(request):
       if fm.is_valid():
           messages.success(request, 'Account Created Successfully !!')
           fm.save()
-          return redirect('/') 
+          return redirect('/login/') 
     else:
         fm = SignUpForm()
 
@@ -38,7 +38,7 @@ def user_login(request):
                 if user is not None:
                     login(request, user)
                     messages.success(request, "Logedin Successfully !!")
-                    return HttpResponseRedirect('/profile/')
+                    return HttpResponseRedirect('/')
                 else:
                     messages.error(request, "Sorry we can't login in your account")
         else:
@@ -127,23 +127,33 @@ def aboutUs(request):
 
 
 
-
-
 # Education section view functions
 # career after 10th
 def after10th(request):
-    return render(request, 'home/after10th.html')
+    if request.user.is_authenticated:
+        return render(request, 'home/after10th.html')
+    else:
+        return HttpResponseRedirect('/login/')
 
 # career after 12th
 def after12th(request):
-    return render(request, 'home/after12th.html')
+    if request.user.is_authenticated:
+        return render(request, 'home/after12th.html')
+    else:
+        return HttpResponseRedirect('/login/')
 
 # career after graduation
 def aftergraduation(request):
-    return render(request, 'home/aftergraduation.html')
+    if request.user.is_authenticated:
+        return render(request, 'home/aftergraduation.html')
+    else:
+        return HttpResponseRedirect('/login/')
 
 def givetestinfo(request):
-    return render(request, 'home/givetestinfo.html')
+    if request.user.is_authenticated:
+        return render(request, 'home/givetestinfo.html')
+    else:
+        return HttpResponseRedirect('/login/')
 
-def footer(request):
-    return render(request,'home/footer.html')
+# def footer(request):
+#     return render(request,'home/footer.html')

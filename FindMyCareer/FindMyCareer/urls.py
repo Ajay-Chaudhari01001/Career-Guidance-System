@@ -32,5 +32,5 @@ urlpatterns = [
     path('aftergraduation/', include('home.urls')),
     path('givetestinfo/', include('home.urls')),
     # path('sendmail/', include('home.urls')),
-    path('footer/', include('home.urls')),
+    # path('footer/', include('home.urls')),
 ]

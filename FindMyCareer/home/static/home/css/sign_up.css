@@ -4,6 +4,7 @@
 body {
     background: url("../images/about-bg.png");
 }
+
 .container {
     top: 60px;
     max-width: 500px;
@@ -37,6 +38,25 @@ body {
 .user-details .input-box input:focus,
 .user-details .input-box input:valid {
     border-color: #9b599b;
+}
+
+
+.container form label {
+    font-size: 14px;
+}
+
+.container form input[type="submit"] {
+    color: #fff;
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input[type="submit"]:active {
+    transform: scale(0.95);
 }
 
 /* body {
