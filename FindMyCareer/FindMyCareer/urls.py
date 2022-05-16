@@ -15,22 +15,25 @@ Including another URLconf
 """
 from msvcrt import LK_NBLCK
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from home import views
+from predict import views as pv
+from educards import views as ev
+from loginsystem import views as lv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('signup/', include('home.urls')),
-    path('login/', include('home.urls')),
-    path('profile/', include('home.urls')),
-    path('logout/', include('home.urls')),
-    path('changepass/', include('home.urls')),
-    path('contact/', include('home.urls')),
-    path('aboutUs/', include('home.urls')),
-    path('after10th/', include('home.urls')),
-    path('after12th/', include('home.urls')),
-    path('aftergraduation/', include('home.urls')),
-    path('givetestinfo/', include('home.urls')),
-    # path('sendmail/', include('home.urls')),
-    # path('footer/', include('home.urls')),
+    path('', views.home_page, name="home"),
+    path('signup/',lv.sign_up, name="signup"),
+    path('login/', lv.user_login, name="login"),
+    path('profile', lv.user_profile, name="profile"),
+    path('logout/', lv.user_logout, name="user_logout"),
+    path('changepass/', lv.user_change_pass, name="changepass"),
+    path('contact/', views.user_contact, name="contact"),
+    path('aboutus/',views.aboutus, name='aboutus'),
+    path('after10th/', ev.after10th, name="after10th"),
+    path('after12th/', ev.after12th, name="after12th"),
+    path('aftergraduation/', ev.aftergraduation, name="aftergraduation"),
+    path("prediction/", pv.question_form, name="predict"),
 ]
+

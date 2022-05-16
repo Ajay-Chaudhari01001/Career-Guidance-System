@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %} Reset Password  {% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'loginsystem/css/changepass.css' %}">
+{% endblock css %}
+
+{% block content %}
+{% include 'home/header.html' %}
+<br><br><br><br><br>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p>{{error}}</p>
+            {% endfor %} 
+        {% endif %}
+
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+        {% endfor %}
+        <input type="submit" value="Save">
+    </form>
+    {% endblock content %}

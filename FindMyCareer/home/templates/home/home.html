@@ -6,19 +6,20 @@
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'home/css/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/footer.css' %}">
 {% endblock css %}
 <!-- starting header section -->
 
 {% block content %}
 
 <!-- starting home section  -->
-
+{% include 'home/header.html' %}
 <section class="home" id="home">
 
     <div class="content">
         <h3>Discover Yourself And <span>Start your free career test</span></h3>
         <p> Take the test and find the perfect role for your after 12th .</p>
-        <a href="{% url 'givetestinfo' %}" class="btn">Give The Test</a>
+        <a href="{% url 'predict' %}" class="btn">Give The Test</a>
     </div>
 
     <div class="image">
@@ -42,7 +43,7 @@
     <div class="box-container">
         <div class="box">
             <img src="{% static 'home/images2/after10th.png ' %}" alt="">
-            <h3>After 10th </h3>
+            <h3>After 10th ? </h3>
             <p>Are you stuck with the questions like What after 10th? What to do
                  after the 10th and which streams to choose?</p>
             <a href="{% url 'after10th' %}" class="btn">Read More</a>
@@ -73,5 +74,4 @@
 
 </section>
 <!-- end educations cards section -->
- {% include 'home/footer.html' %}
 {% endblock content %}

@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-{% extends "home/base2.html" %}
 {% load static %}
-
-{% block title %} About Us {% endblock title %}
-
-{% block css %}
-    {{ block.super }}
-{% endblock css %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'home/images/aboutus.css' %">
+    <style>
+        body{
+            font-size: 14px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        .content p{
+            text-align: center;
+            font-family: 12px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'home/header.html' %}
+    <br><br><br>
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>About us</h1>
+                </div>
+                <div class="content">
+                    <h3>One of the main purpose to create the website is the student who are misguided, confuse, or in problamatic situation about their future
+                        plans and the currier opportunities. so the information of this site is helpful for them.</h3>
+                         this information provides different opportunities which means refers to particular job that may be a steppingstone to loffier ambitions and reading information about our currier 
+                         is the best way to explore our self.
+                         <P>Today's students are incresingly multinational wanting to make an impact on the world,
+                             and striving for brighter future.
+                         </P>
+                         <p>The website is operated by Ajay chaudhari, Satish chaudhari, Ashish patil and Shubham dhangar.</p>
+                    </div>
+            </div>
+            <div class="image-section">
+                <img src="{% static 'home/images/aboutuslogo.png' %}">
+            </div>
+        </div>
+    </div>
     
-
-{% block content %}
-    <!-- Write page content here -->
-{% endblock content %}
+</body>
+</html>

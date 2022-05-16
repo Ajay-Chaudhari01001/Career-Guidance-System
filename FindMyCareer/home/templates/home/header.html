@@ -1,38 +1,31 @@
 <!DOCTYPE html>
+{% extends "home/base.html" %}
 {% load static %}
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/header.css' %}">
+{% endblock css %}
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-    <link rel="stylesheet" href="{% static 'home/css/header.css' %}">
-</head>
-
-<body>
-    <!-- starting header section -->
+{% block content %}
 
     <header>
         <a href="#" class="logo"><span>FindMy</span>Career</a>
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar" class="fas fa-bars"></label>
         <nav class="navbar">
-            <a href="{% url 'home_page' %}">Home</a>
+            <a href="{% url 'home' %}">Home</a>
             <a href="#services">Services</a>
             <!-- <a href="#fetures">Fetures</a> -->
             <a href="{% url 'contact' %}">Contact us</a>
-            <a href="{% url 'about' %">About us</a>
+            <a href="{% url 'aboutus' %}">About us</a>
             <a href="{% url 'login' %}">Login</a>
             <a href="{% url 'signup' %}">Sign Up</a>
         </nav>
-        <a href="{% url 'profile' %}" class="username">Welcome {{user.first_name}}</a>
+        <div class="user">
+            <a href="{% url 'profile' %}" class="username">{{user.first_name}}</a>
+        </div>
+        
     </header>
     <!-- end of header section -->
 
-</body>
-
-</html>
+{% endblock content %}

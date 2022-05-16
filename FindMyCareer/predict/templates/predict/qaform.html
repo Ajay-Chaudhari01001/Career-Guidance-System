@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question form</title>
+    <link rel="stylesheet" href="{% static 'predict/qaform1.css' %}">
+</head>
+
+<body>
+    {% include 'home/header.html' %} 
+    <br><br><br><br><br> <br>
+    <center>
+        <h1>Give the rating as your intrest field and predict yourself </h1>
+    </center>
+    <div>
+        <form action="" method="POST"> 
+            {% csrf_token %}
+            {% for fm in key %}
+            <table>
+                <tr>
+                    <td>{{fm.id}} ) {{fm.Question}} </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="Option1" name="{{fm.id}}" value="{{fm.Option1}}" >{{fm.Option1}}</td>
+                </tr>
+
+                <tr>
+                    <td><input type="radio" id="Option2" name="{{fm.id}}" value="{{fm.Option2}}">{{fm.Option2}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="Option3" name="{{fm.id}}" value="{{fm.Option3}}">{{fm.Option3}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="Option4" name="{{fm.id}}" value="{{fm.Option4}}">{{fm.Option4}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="Option5" name="{{fm.id}}" value="{{fm.Option5}}">{{fm.Option5}}</td>
+                </tr>
+            </table>
+            <hr>
+            {% endfor %}
+            <input type="submit" value="Predict Yourself">
+        </form>
+    </div>
+</body>
+</html>
